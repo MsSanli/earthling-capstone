@@ -1,0 +1,72 @@
+[
+  {
+    "model": "earthling_api.Tag",
+    "pk": 1,
+    "fields": {
+      "name": "Culture"
+    }
+  },
+  {
+    "model": "earthling_api.Tag",
+    "pk": 2,
+    "fields": {
+      "name": "Vowel"
+    }
+  },
+  {
+    "model": "earthling_api.Tag",
+    "pk": 3,
+    "fields": {
+      "name": "Greeting"
+    }
+  },
+  {
+    "model": "earthling_api.Tag",
+    "pk": 4,
+    "fields": {
+      "name": "Religious"
+    }
+  },
+  {
+    "model": "earthling_api.Tag",
+    "pk": 5,
+    "fields": {
+      "name": "Idiom"
+    }
+  },
+  {
+    "model": "earthling_api.Tag",
+    "pk": 6,
+    "fields": {
+      "name": "Slang"
+    }
+  },
+  {
+    "model": "earthling_api.Tag",
+    "pk": 7,
+    "fields": {
+      "name": "Formal"
+    }
+  },
+  {
+    "model": "earthling_api.Tag",
+    "pk": 8,
+    "fields": {
+      "name": "Informal"
+    }
+  },
+  {
+    "model": "earthling_api.Tag",
+    "pk": 9,
+    "fields": {
+      "name": "Feminine"
+    }
+  },
+  {
+    "model": "earthling_api.Tag",
+    "pk": 10,
+    "fields": {
+      "name": "Masculine"
+    }
+  }
+]
