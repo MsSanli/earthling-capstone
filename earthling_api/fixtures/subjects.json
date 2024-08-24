@@ -1,0 +1,32 @@
+[
+  {
+    "model": "earthling_api.Subject",
+    "pk": 1,
+    "fields": {
+      "age": 28,
+      "native_language": "Southern Tati",
+      "other_languages": "English, Spanish, Farsi",
+      "additional_info": "Last of her generation to speak Tati fluently"
+    }
+  },
+  {
+    "model": "earthling_api.Subject",
+    "pk": 2,
+    "fields": {
+      "age": 35,
+      "native_language": "Uzbeki",
+      "other_languages": "Pre-Soviet Uzbek, German",
+      "additional_info": "Studied upto 7th grade in Andkhoy, Afghanistan. Literacy limited in writing and reading. Proficient in Speaking."
+    }
+  },
+  {
+    "model": "earthling_api.Subject",
+    "pk": 3,
+    "fields": {
+      "age": 22,
+      "native_language": "Quechua",
+      "other_languages": "English, Spanish",
+      "additional_info": "Visiting from Peru for only 6 months."
+    }
+  }
+]
