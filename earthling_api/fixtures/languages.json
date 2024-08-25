@@ -1,0 +1,38 @@
+[
+  {
+    "model": "earthling_api.Language",
+    "pk": 1,
+    "fields": {
+      "name": "Southern Tati",
+      "region": "Iran",
+      "number_of_speakers": 6000,
+      "pronunciation": "tati",
+      "language_family": "Indo-European",
+      "writing_system": "Arabic script"
+    }
+  },
+  {
+    "model": "earthling_api.Language",
+    "pk": 2,
+    "fields": {
+      "name": "Uzbeki",
+      "region": "Uzbekistan",
+      "number_of_speakers": 27000000,
+      "pronunciation": "uzbeki",
+      "language_family": "Turkic",
+      "writing_system": "Latin script"
+    }
+  },
+  {
+    "model": "earthling_api.Language",
+    "pk": 3,
+    "fields": {
+      "name": "Quechua",
+      "region": "Peru",
+      "number_of_speakers": 8000000,
+      "pronunciation": "kechua",
+      "language_family": "Quechuan",
+      "writing_system": "Latin script"
+    }
+  }
+]

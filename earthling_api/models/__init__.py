@@ -3,3 +3,4 @@ from .tag import Tag
 from .subject import Subject
 from .entry import Entry
 from .entry_tag import EntryTag
+from .language import Language
