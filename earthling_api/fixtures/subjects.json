@@ -3,30 +3,30 @@
     "model": "earthling_api.Subject",
     "pk": 1,
     "fields": {
+      "name": "Subject 1",
       "age": 28,
-      "native_language": "Southern Tati",
-      "other_languages": "English, Spanish, Farsi",
-      "additional_info": "Last of her generation to speak Tati fluently"
+      "language_id": 1,
+      "additional_info": "Last of her generation to speak Tati fluently. Also speaks English, Spanish, and Farsi."
     }
   },
   {
     "model": "earthling_api.Subject",
     "pk": 2,
     "fields": {
+      "name": "Subject 2",
       "age": 35,
-      "native_language": "Uzbeki",
-      "other_languages": "Pre-Soviet Uzbek, German",
-      "additional_info": "Studied upto 7th grade in Andkhoy, Afghanistan. Literacy limited in writing and reading. Proficient in Speaking."
+      "language_id": 2,
+      "additional_info": "Studied up to 7th grade in Andkhoy, Afghanistan. Literacy limited in writing and reading. Proficient in Speaking. Also speaks Pre-Soviet Uzbek and German."
     }
   },
   {
     "model": "earthling_api.Subject",
     "pk": 3,
     "fields": {
+      "name": "Subject 3",
       "age": 22,
-      "native_language": "Quechua",
-      "other_languages": "English, Spanish",
-      "additional_info": "Visiting from Peru for only 6 months."
+      "language_id": 3,
+      "additional_info": "Visiting from Peru for only 6 months. Also speaks English and Spanish."
     }
   }
 ]
