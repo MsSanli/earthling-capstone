@@ -18,6 +18,11 @@ class EntryView(ViewSet):
         entries = Entry.objects.all()
         serializer = EntrySerializer(entries, many=True)
         return Response(serializer.data)
+      
+    def destroy(self, request, pk):
+        entry = get_object_or_404(Entry, pk=pk)
+        entry.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)     
 
 
 class EntrySerializer(serializers.ModelSerializer):
