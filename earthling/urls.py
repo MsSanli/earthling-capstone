@@ -11,7 +11,7 @@ router.register(r'entry', EntryView, 'entry')
 router.register(r'subject', SubjectView, 'subject')
 router.register(r'language', LanguageView, 'language')
 router.register(r'tag', TagView, 'tag')
-router.register(r'entrytag', EntryTagViewSet, 'entry-tag')
+router.register(r'entrytag', EntryTagViewSet, 'entrytag')
 
 
 urlpatterns = [ 
