@@ -1,22 +1,19 @@
-"""
-URL configuration for earthling project.
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from earthling_api.views import UserView, EntryView, SubjectView, LanguageView, TagView, EntryTagViewSet
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path
+# notes: The first argument is what you want your URL path to be.
+# The second argument is the view that will handle client requests to that route.
+# The third argument is needed in order for a route to be registered
+router = DefaultRouter(trailing_slash=False)
+router.register(r'users', UserView, 'user')
+router.register(r'entry', EntryView, 'entry')
+router.register(r'subject', SubjectView, 'subject')
+router.register(r'language', LanguageView, 'language')
+router.register(r'tag', TagView, 'tag')
+router.register(r'entrytag', EntryTagViewSet, 'entrytag')
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
+
+urlpatterns = [ 
+    path('', include(router.urls)),
 ]
