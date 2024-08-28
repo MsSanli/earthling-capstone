@@ -22,8 +22,28 @@ class UserView(ViewSet):
         """
         user = User.objects.get(pk=pk)
         user.delete()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)  
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+      
+    def create(self, request):
+        """
+        Function to create a new user
+        """
+        serializer = UserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+    def update(self, request, pk=None):
+        """
+        Function to update a user
+        """
+        user = User.objects.get(pk=pk)
+        serializer = UserSerializer(user, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class UserSerializer(serializers.ModelSerializer):
 
