@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from earthling_api.views import UserView, EntryView, SubjectView, LanguageView, TagView, EntryTagViewSet
+from earthling_api.views import UserView, EntryView, SubjectView, LanguageView, TagView
 
 # notes: The first argument is what you want your URL path to be.
 # The second argument is the view that will handle client requests to that route.
@@ -11,7 +11,6 @@ router.register(r'entry', EntryView, 'entry')
 router.register(r'subject', SubjectView, 'subject')
 router.register(r'language', LanguageView, 'language')
 router.register(r'tag', TagView, 'tag')
-router.register(r'entrytag', EntryTagViewSet, 'entrytag')
 
 
 urlpatterns = [ 
