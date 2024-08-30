@@ -5,22 +5,22 @@ from django.shortcuts import get_object_or_404
 from earthling_api.models import Tag
 
 class TagView(ViewSet):
-  # single tag
-  def retrieve(self, request, pk=None):
-      tag = get_object_or_404(Tag, pk=pk)
-      serializer = TagSerializer(tag)
-      return Response(serializer.data)
+    # single tag
+    def retrieve(self, request, pk=None):
+        tag = get_object_or_404(Tag, pk=pk)
+        serializer = TagSerializer(tag)
+        return Response(serializer.data)
 
-#multiple tags, not sure if this is needed
-  def list(self, request):
-      tags = Tag.objects.all()
-      serializer = TagSerializer(tags, many=True)
-      return Response(serializer.data)
+    # multiple tag, not sure if this is needed
+    def list(self, request):
+        tag = Tag.objects.all()
+        serializer = TagSerializer(tag, many=True)
+        return Response(serializer.data)
   
-  def destroy(self, request, pk=None):
-      tag = get_object_or_404(Tag, pk=pk)
-      tag.delete()
-      return Response(status=status.HTTP_204_NO_CONTENT)
+    def destroy(self, request, pk=None):
+        tag = get_object_or_404(Tag, pk=pk)
+        tag.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 class TagSerializer(serializers.ModelSerializer):
     class Meta:
