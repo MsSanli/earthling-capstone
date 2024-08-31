@@ -7,10 +7,10 @@ from earthling_api.views import UserView, EntryView, SubjectView, LanguageView, 
 # The third argument is needed in order for a route to be registered
 router = DefaultRouter(trailing_slash=False)
 router.register(r'users', UserView, 'user')
-router.register(r'entry', EntryView, 'entry')
-router.register(r'subject', SubjectView, 'subject')
-router.register(r'language', LanguageView, 'language')
-router.register(r'tag', TagView, 'tag')
+router.register(r'entries', EntryView, 'entry')
+router.register(r'subjects', SubjectView, 'subject')
+router.register(r'languages', LanguageView, 'language')
+router.register(r'tags', TagView, 'tag')
 
 
 urlpatterns = [ 
