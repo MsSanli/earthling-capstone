@@ -5,8 +5,13 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from earthling_api.models import Entry, Tag, Subject, User
 
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = ['id', 'name']
+
 class EntrySerializer(serializers.ModelSerializer):
-    tag = serializers.StringRelatedField(many=True, read_only=True)
+    tag = TagSerializer(many=True, read_only=True)
 
     class Meta:
         model = Entry
